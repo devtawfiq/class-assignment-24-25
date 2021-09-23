@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?951d3dbeda2f963beaf0653f54b7553a") format("truetype"),
+url("./flaticon.woff?951d3dbeda2f963beaf0653f54b7553a") format("woff"),
+url("./flaticon.woff2?951d3dbeda2f963beaf0653f54b7553a") format("woff2"),
+url("./flaticon.eot?951d3dbeda2f963beaf0653f54b7553a#iefix") format("embedded-opentype"),
+url("./flaticon.svg?951d3dbeda2f963beaf0653f54b7553a#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "play-button": "\f101",
+    "selfie": "\f102",
+    "monitoring": "\f103",
+    "route": "\f104",
+);
+
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
+.flaticon-selfie:before {
+    content: map-get($flaticon-map, "selfie");
+}
+.flaticon-monitoring:before {
+    content: map-get($flaticon-map, "monitoring");
+}
+.flaticon-route:before {
+    content: map-get($flaticon-map, "route");
+}
